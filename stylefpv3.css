@@ -406,104 +406,104 @@ header {
 }
 
 .photo-1 {
-    background-image: url(./web-assets/pictures/fraction1.png);
+    background-image: url('./web-assets/pictures/fraction1.png');
 
 }
 
 .photo-2 {
-    background-image: url(./web-assets/pictures/fraction2.png);
+    background-image: url('./web-assets/pictures/fraction2.png');
 }
 
 .photo-3 {
-    background-image: url(./web-assets/pictures/fraction3.png);
+    background-image: url('./web-assets/pictures/fraction3.png');
     background-position: bottom;
 }
 
 .photo-4 {
-    background-image: url(./web-assets/pictures/fraction4.png);
+    background-image: url('./web-assets/pictures/fraction4.png');
     background-position: top;
 }
 
 .photo-5 {
-    background-image: url(./web-assets/pictures/fraction5.png);
+    background-image: url('./web-assets/pictures/fraction5.png');
 }
 
 .photo-6 {
-    background-image: url(./web-assets/pictures/fraction6.png);
+    background-image: url('./web-assets/pictures/fraction6.png');
     background-position: top;
 }
 
 .photo-7 {
-    background-image: url(./web-assets/pictures/fraction7.png);
+    background-image: url('./web-assets/pictures/fraction7.png');
 }
 
 .photo-8 {
-    background-image: url(./web-assets/pictures/fraction20.png);
+    background-image: url('./web-assets/pictures/fraction20.png');
 }
 
 .photo-9 {
-    background-image: url(./web-assets/pictures/fraction9.png);
+    background-image: url('./web-assets/pictures/fraction9.png');
 }
 
 .photo-10 {
-    background-image: url(./web-assets/pictures/fraction10.png);
+    background-image: url('./web-assets/pictures/fraction10.png');
 }
 
 .photo-11 {
-    background-image: url(./web-assets/pictures/fraction63.png);
+    background-image: url('./web-assets/pictures/fraction63.png');
 }
 
 .photo-12 {
-    background-image: url(./web-assets/pictures/fraction59.png);
+    background-image: url('./web-assets/pictures/fraction59.png');
     background-position-y: -30px;
 }
 
 .photo-13 {
-    background-image: url(./web-assets/pictures/fraction13.png);
+    background-image: url('./web-assets/pictures/fraction13.png');
 }
 
 .photo-14 {
-    background-image: url(./web-assets/pictures/fraction14.png);
+    background-image: url('./web-assets/pictures/fraction14.png');
 }
 
 .photo-15 {
-    background-image: url(./web-assets/pictures/fraction15.png);
+    background-image: url('./web-assets/pictures/fraction15.png');
 }
 
 .photo-16 {
-    background-image: url(./web-assets/pictures/fraction24.png);
+    background-image: url('./web-assets/pictures/fraction24.png');
 }
 
 .photo-17 {
-    background-image: url(./web-assets/pictures/fraction17.png);
+    background-image: url('./web-assets/pictures/fraction17.png');
 }
 
 .photo-18 {
-    background-image: url(./web-assets/pictures/fraction40.png);
+    background-image: url('./web-assets/pictures/fraction40.png');
 }
 
 .photo-19 {
-    background-image: url(./web-assets/pictures/fraction31.png);
+    background-image: url('./web-assets/pictures/fraction31.png');
 }
 
 .photo-20 {
-    background-image: url(./web-assets/pictures/fraction33.png);
+    background-image: url('./web-assets/pictures/fraction33.png');
 }
 
 .photo-21 {
-    background-image: url(./web-assets/pictures/fraction32.png);
+    background-image: url('./web-assets/pictures/fraction32.png');
 }
 
 .photo-22 {
-    background-image: url(./web-assets/pictures/fraction56.png);
+    background-image: url('./web-assets/pictures/fraction56.png');
 }
 
 .photo-23 {
-    background-image: url(./web-assets/pictures/fraction62.png);
+    background-image: url('./web-assets/pictures/fraction62.png');
 }
 
 .photo-24 {
-    background-image: url(./web-assets/pictures/fraction45.png);
+    background-image: url('./web-assets/pictures/fraction45.png');
 }
 
 .content {
