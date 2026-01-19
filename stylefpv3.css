@@ -1,0 +1,800 @@
+* {
+    /* reset page web */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    scrollbar-width: thin;
+    /* the scrollbar width */
+    scrollbar-color: #900000 #ffffff;
+    /* thumb (the thing that moves while scrolling) color and track (the background of the scrollbar) color */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.marquee {
+    margin-top: 10.4em;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: #ffe8e8c5;
+    color: #00206b;
+    position: relative;
+    border-bottom: 2px solid #000000;
+}
+
+.marquee-content {
+    display: inline-block;
+    /* to make the content a block level element */
+    animation: marquee 23s linear infinite;
+    font-size: 25px;
+}
+
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+header {
+    background: linear-gradient(90deg, #ff4e50, #fc913a);
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-bottom: 2px solid #000000;
+    /* for the looking of the header */
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    background-color: #f8f8f8;
+    z-index: 7;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    /* for the structure of the header */
+}
+
+.logo {
+    width: 200px;
+    height: 80px;
+    background-image: url(logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.search-bar {
+    flex-basis: 80%;
+    padding: 12px;
+    border: 2px solid #440000;
+    border-radius: 17px;
+    /* for the width of the search bar */
+    outline: none;
+    /* Remove the default outline border when focus */
+}
+
+.search-bar:focus {
+    border-color: #009dff;
+    /* Darker blue when focused */
+}
+
+.navbar {
+    margin-top: 1.9em;
+    /* Space between the logo, the search bar elements and the navbar */
+    margin-left: 9em;
+}
+
+.navbar ul {
+    list-style: none;
+    /* to remove the default list style (the black dots from the start of every li) */
+    display: flex;
+}
+
+.navbar li {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.navbar .nava {
+    font-size: 1em;
+    font-weight: 500 ;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar .nava::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    /* all of that is for the appearance of the under line effect on hover */
+}
+
+.navbar .nava:hover::after {
+    transform: scaleX(1);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    top: -8px;
+    right: -25px;
+    width: 100px;
+    height: 200px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slide-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.circle-container {
+    background-color: #f0f0f0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-image {
+    width: 75%;
+    height: 75%;
+}
+
+.slide-container a {
+    color: #2400d7;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    padding: 20px auto;
+}
+
+.slide-container:hover {
+    transform: scale(1.1) translateX(-85px);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* the button styles */
+.menu-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+/* the menu styles */
+.menu-container {
+    position: fixed;
+    width: 60vw;
+    margin-top: 12px;
+    margin-left: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px #00000033;
+    padding: 10px;
+    opacity: 1;
+    /* gives the " oh! it shows up from nothing " effect */
+    transform: translateX(-70vw);
+    /* to start slightly above */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* smooooth effect */
+    z-index: 5;
+}
+
+/* when the menu is targeted, animate it */
+.menu-container:target {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-row {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* for each menu item ,when the menu is targeted , starts the animation*/
+.menu-container:target .menu-row {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-row:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.menu-row:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.menu-row:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.menu-row:nth-child(4) {
+    transition-delay: 0.7s;
+}
+
+.menu-item {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #d3d3d3;
+}
+
+.soon-item {
+    text-align: center;
+    margin: 10px;
+    align-self: center;
+    color: #440000;
+}
+
+.close-menu {
+    display: block;
+    /* make it a block element to be able to fit into the menu */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 0 0 5px 5px;
+    margin-top: 10px;
+}
+
+.close-menu:hover {
+    background-color: #256b99;
+}
+
+.searchandmenu-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 75vw;
+    position: fixed;
+    left: 15em;
+    z-index: 5;
+}
+
+.page {
+    display: flex;
+    width: 100vw;
+    height: 82.85vh;
+    background-color: transparent;
+    margin-right: 220px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: bganimation 150s infinite;
+}
+
+.container {
+    position: relative;
+    top: -75px;
+    left: -120px;
+    transform: rotate(10deg);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    filter: blur(6px);
+    opacity: 0.5;
+    transition: filter 0.3s ease-in-out , opacity 0.3s ease-in-out ;
+}
+
+.container:hover {
+    filter: none;
+    opacity: 1;
+}
+
+.slider {
+    display: flex;
+    width: calc(300px * 6);
+    gap: 60px;
+}
+
+.photo-item {
+    width: 240px;
+    height: 160px;
+    border-radius: 17px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 10px 50px black;
+}
+
+.animation-1 {
+    animation: scroller 40s linear infinite;
+    display: flex;
+    width: calc(300px * 12);
+    margin-left: 100px;
+}
+
+.animation-2 {
+    margin-left: 150px;
+    animation: scroller 30s linear infinite;
+    display: flex;
+    width: calc(300px * 12);
+}
+
+.animation-3 {
+    animation: scroller 50s linear infinite;
+    display: flex;
+    width: calc(300px * 12);
+}
+
+.animation-4 {
+    animation: scroller 20s linear infinite;
+    display: flex;
+    width: calc(300px * 12);
+}
+
+.slider:hover {
+    animation-play-state: paused !important;
+    /* for the animation to stop when hover on */
+}
+
+.slider:hover .photo-item {
+    filter: grayscale(1);
+    /* for all the images to turn gray when hover on the slider*/
+}
+
+.slider .photo-item:hover {
+    transform: scale(1.1) rotate(-10deg);
+    transition: all ease-in-out 0.5s;
+    filter: none;
+    /* for the image to turn back to normal when hover on the image */
+}
+
+@keyframes scroller {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-300px * 6));
+    }
+}
+
+.photo-1 {
+    background-image: url(./assets/pictures/fraction1.png);
+
+}
+
+.photo-2 {
+    background-image: url(./assets/pictures/fraction2.png);
+}
+
+.photo-3 {
+    background-image: url(./assets/pictures/fraction3.png);
+    background-position: bottom;
+}
+
+.photo-4 {
+    background-image: url(./assets/pictures/fraction4.png);
+    background-position: top;
+}
+
+.photo-5 {
+    background-image: url(./assets/pictures/fraction5.png);
+}
+
+.photo-6 {
+    background-image: url(./assets/pictures/fraction6.png);
+    background-position: top;
+}
+
+.photo-7 {
+    background-image: url(./assets/pictures/fraction7.png);
+}
+
+.photo-8 {
+    background-image: url(./assets/pictures/fraction20.png);
+}
+
+.photo-9 {
+    background-image: url(./assets/pictures/fraction9.png);
+}
+
+.photo-10 {
+    background-image: url(./assets/pictures/fraction10.png);
+}
+
+.photo-11 {
+    background-image: url(./assets/pictures/fraction63.png);
+}
+
+.photo-12 {
+    background-image: url(./assets/pictures/fraction59.png);
+    background-position-y: -30px;
+}
+
+.photo-13 {
+    background-image: url(./assets/pictures/fraction13.png);
+}
+
+.photo-14 {
+    background-image: url(./assets/pictures/fraction14.png);
+}
+
+.photo-15 {
+    background-image: url(./assets/pictures/fraction15.png);
+}
+
+.photo-16 {
+    background-image: url(./assets/pictures/fraction24.png);
+}
+
+.photo-17 {
+    background-image: url(./assets/pictures/fraction17.png);
+}
+
+.photo-18 {
+    background-image: url(./assets/pictures/fraction40.png);
+}
+
+.photo-19 {
+    background-image: url(./assets/pictures/fraction31.png);
+}
+
+.photo-20 {
+    background-image: url(./assets/pictures/fraction33.png);
+}
+
+.photo-21 {
+    background-image: url(./assets/pictures/fraction32.png);
+}
+
+.photo-22 {
+    background-image: url(./assets/pictures/fraction56.png);
+}
+
+.photo-23 {
+    background-image: url(./assets/pictures/fraction62.png);
+}
+
+.photo-24 {
+    background-image: url(./assets/pictures/fraction45.png);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 30px 2px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    animation: bganimation 150s infinite;
+}
+
+@keyframes bganimation {
+
+    0%,
+    100% {
+        background-color: #003a2d;
+    }
+
+    12% {
+        background-color: #1c5800;
+    }
+
+    25% {
+        background-color: #920049;
+    }
+
+    37% {
+        background-color: #ff0000;
+    }
+
+    50% {
+        background-color: #a56b00;
+    }
+
+    62% {
+        background-color: #535200;
+    }
+
+    75% {
+        background-color: #00004d;
+    }
+
+    87% {
+        background-color: #2b0047;
+    }
+}
+
+.background:hover .content {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.sentence1 {
+    font-size: 8em;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sentence2 {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mainhome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 30px;
+    background-color: #fcfcfc;
+}
+
+.welcoming {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.welcoming h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+    color: #000000;
+    text-shadow: 0 5px 20px #0000009d; /* Add shadow for depth */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+.welcoming p {
+    text-align: center;
+    color: #565656;
+    font-size: 1.25em;
+}
+
+.product-space {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+section h1 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+section h1::after {
+    content: '';
+    position: absolute;
+    left: 105%;
+    right: 0;
+    top: 55%;
+    width: 100vw;
+    height: 2px;
+    background-color: #000;
+}
+
+section h1::before {
+    content: '';
+    position: absolute;
+    left: -100vw;
+    right: 100%;
+    top: 50%;
+    height: 2px;
+    background-color: #000;
+}
+
+.product-card {
+    background-color: #f5fbff; /* Light gray background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #00000033;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.add-to-cart {
+    width: 150px;
+    background-color: #14689f;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #409fde;
+}
+
+.like-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 15px;
+}
+
+.like-checkbox {
+    display: none;
+    /* to hide the checkbox */
+}
+
+.like-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('like.png');
+    background-size: cover;
+}
+
+.like-checkbox:checked + .like-icon {
+    content: url('liked.png');
+}
+
+.like-button:hover .like-icon {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-out;
+}
+
+.product-stats {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* the footer style */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-top: 2px solid #000;
+    
+}
+
+/* the footer design */
+.footer-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #14689f;
+    text-decoration: none; 
+}
+
+.footer-section a:hover {
+    text-decoration: underline; 
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media img {
+    width: 30px; 
+    height: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #6a6a6a;
+}
+

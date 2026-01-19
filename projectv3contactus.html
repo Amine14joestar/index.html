@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers Without Borders - Contact Us</title>
+    <link rel="stylesheet" href="stylefpv3.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 30vh auto 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #0000003b;
+        }
+
+        h1 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 3.5em;
+            text-align: center;
+            color: #242424;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            line-height: 2;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .good {
+            padding: 10px 15px;
+            background-color: #008b00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .good:hover {
+            background-color: #20b920;
+        }
+
+        .bad {
+            padding: 10px 15px;
+            background-color: #cb0000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .bad:hover {
+            background-color: #ff2d2d;
+        }
+
+        .good img {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo" id="home"></div>
+            <div class="searchandmenu-container">
+                <input type="text" class="search-bar" placeholder="🔍  Search here for what you want...">
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="projectv3.html" class="nava">Home</a></li>
+                <li><a href="project3vaboutus.html" class="nava">About Us</a></li>
+                <li><a href="projectv3product.html" class="nava">Products</a></li>
+                <li><a href="#" class="nava">Contact</a></li>
+                <li><a href="projectv3faq.html" class="nava">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <div class="slide-container">
+            <div class="circle-container">
+                <img src="./assets/icons/user.png" alt="account" class="circle-image">
+            </div>
+            <a href="projectv3signin.html">Account</a>
+        </div>
+
+        <div class="slide-container">
+            <div class="circle-container">
+                <img src="./assets/icons/heart.png" alt="liked" class="circle-image">
+            </div>
+            <a href="">Liked</a>
+        </div>
+
+        <div class="slide-container">
+            <div class="circle-container">
+                <img src="./assets/icons/shopping-cart.png" alt="cart" class="circle-image">
+            </div>
+            <a href="">My&nbsp;Cart</a>
+        </div>
+    </aside>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Our Email: <a href="">infos@DesignersSansFrontieres.com</a></p>
+            <p>Phone: (+212) 648-281-657</p>
+        </div>
+        <form class="contact-form" action="#" method="get">
+            <div class="form-group">
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject :</label>
+                <input type="text" id="subject" name="subject" placeholder="Exemple : Support , Feedback , Question...">
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required
+                    placeholder="Write a message to us..."></textarea>
+            </div>
+            <button type="submit" class="good">
+                <img src="./assets/icons/send.png" alt="message">
+                Send Message
+            </button>
+            <button type="reset" class="bad">
+                Clear Everything
+            </button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>
+                    Welcome to Designers Without Borders, where creativity meets collaboration! Our mission is to
+                    connect visionary clients with talented designers who can bring their ideas to life.
+                </p>
+                <a href="project3vaboutus.html">Learn more</a>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="projectv3.html">Home</a></li>
+                    <li><a href="projectv3product.html">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="projectv3faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get Help</h4>
+                <ul>
+                    <li>Support</li>
+                    <li>Contact</li>
+                    <li>Feedback</li>
+                    <li>Sent to our email : <a href="">Support@DesignersSansFrontieres.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" title="Facebook"><img src="./assets/icons/facebook.png" alt="Facebook"></a>
+                    <a href="https://x.com/" title="X"><img src="./assets/icons/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/" title="Instagram"><img src="./assets/icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Designers Without Borders. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
